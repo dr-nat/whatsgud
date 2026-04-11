@@ -4,3 +4,6 @@ version = "0.1.0"
 edition = "2024"
 
 [dependencies]
+futures-channel = "0.3.32"
+tokio-tungstenite = "0.29.0"
+tungstenite = "0.29.0"
