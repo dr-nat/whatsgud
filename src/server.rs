@@ -3,12 +3,20 @@ use std::{
     thread,
     collections::HashMap,
     error::Error,
+    net::{SocketAddr, TcpStream},
 };
 use tokio_tungstenite::tungstenite::protocol::Message;
 use futures_channel::mpsc::{unbounded, UnboundedSender};
 
-fn handle_connection() {
-    type Tx = UnboundedSender<Message>;
-    let shared_state: Arc<Mutex<HashMap<String, Tx>>> = Arc::new(Mutex::new(HashMap::new()));
+
+type Tx = UnboundedSender<Message>;
+
+
+async fn handle_connection() {
+    let chat_room: HashMap<String, Tx> = HashMap::new();
+
+    //println!("Incoming Tcp connection from: {}");
+
+
 
 }
