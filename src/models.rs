@@ -16,7 +16,7 @@ impl MsgFormat {
             uuid: uuid,
         }    
     }
-
+    // the time stamp and username are concatenated and hashed to get the uuid.
     fn get_uuid(username: &String) -> String{
         let time_stamp = Utc::now().timestamp_nanos_opt().unwrap();      
 
